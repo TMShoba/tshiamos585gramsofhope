@@ -144,6 +144,38 @@ main {
 .mobile-menu{
   display:none;
 }
+.mobile-menu{
+  display:none;
+  width:40px;
+  height:40px;
+  align-items:center;
+  justify-content:center;
+  background:transparent;
+  border:1px solid rgba(116,70,168,.2);
+  border-radius:10px;
+  font-size:20px;
+  color:var(--deep);
+  cursor:pointer;
+}
+
+.mobile-nav-panel{
+  display:flex;
+  flex-direction:column;
+  background:white;
+  border-top:1px solid rgba(116,70,168,.12);
+  box-shadow: 0 12px 25px rgba(50,25,77,.08);
+}
+.mobile-nav-panel a{
+  padding:14px 24px;
+  font-size:14px;
+  font-weight:700;
+  color:var(--ink);
+  border-bottom:1px solid rgba(116,70,168,.08);
+}
+.mobile-nav-panel a:hover{
+  color:var(--purple);
+  background:var(--lavender);
+}
  
 /* =========================================================
    BUTTONS
@@ -873,7 +905,7 @@ footer .container{
     display:none;
   }
   .mobile-menu{
-    display:inline-flex;
+    display:flex;
   }
   .hero{
     padding:50px 0 70px;
