@@ -5,7 +5,7 @@ function Footer() {
       <footer>
         <div className="container">
           <div>© {year} Tshiamos 585 Grams of Hope Foundation.</div>
-          <div>Every tiny life matters • Built with hope ♡</div>
+     {/*   <div>Every tiny life matters • Built with hope ♡</div>    */}
           <div className="footer-social">
             <span className="footer-social-text">Follow us:</span>
             <a
@@ -46,7 +46,7 @@ function Footer() {
             </a>
            {/* <span>@tshiamos585grams</span> */}
           </div>
-          <div>Powered By Mosa And Thabo ♡</div>
+        {/*<div>Powered By Mosa And Thabo ♡</div> */}
         </div>
       </footer>
     )
