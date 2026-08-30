@@ -15,10 +15,10 @@ function GetInvolved() {
         <div className="involve-grid">
           <div className="card">
             <div className="icon">♡</div>
-            <h3>Volunteer</h3>
+            <h3>Volunteering</h3>
             <p>
               Give your time, skills and energy to support the
-              foundation's work.
+              foundation's work with families and awareness campaigns.
             </p>
             <Link
               className="btn btn-primary"
@@ -30,9 +30,10 @@ function GetInvolved() {
           </div>
           <div className="card">
             <div className="icon">✦</div>
-            <h3>Sponsor</h3>
+            <h3>Partnerships</h3>
             <p>
-              Partner with the foundation to support awareness and family
+              Partner with the foundation as an organisation, business or
+              healthcare institution to support awareness and family
               programmes.
             </p>
             <Link
@@ -40,22 +41,22 @@ function GetInvolved() {
               to="/#contact"
               style={{ marginTop: '18px' }}
             >
-              Become a Sponsor
+              Become a Partner
             </Link>
           </div>
           <div className="card">
             <div className="icon">∞</div>
-            <h3>Fundraise</h3>
+            <h3>Donations</h3>
             <p>
-              Help raise funds and awareness for the foundation's
-              initiatives.
+              Host a fundraiser or give directly — every donation helps us
+              reach more NICU families with support and resources.
             </p>
             <Link
               className="btn btn-primary"
-              to="/#contact"
+              to="/donate"
               style={{ marginTop: '18px' }}
             >
-              Start Fundraising
+              Donate
             </Link>
           </div>
         </div>
