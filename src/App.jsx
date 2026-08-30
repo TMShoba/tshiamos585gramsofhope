@@ -9,8 +9,7 @@ import GetInvolvedPage from './pages/GetInvolvedPage.jsx'
 import PrematurityPage from './pages/PrematurityPage.jsx'
 import EventsPage from './pages/EventsPage.jsx'
 import DictionaryPage from './pages/DictionaryPage.jsx'
-import MemoryModal from './Components/MemoryModal';
-
+import DonatePage from './pages/DonatePage.jsx'
 
 function App() {
   return (
@@ -26,6 +25,7 @@ function App() {
           <Route path="/prematurity" element={<PrematurityPage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/dictionary" element={<DictionaryPage />} />
+          <Route path="/donate" element={<DonatePage />} />
         </Routes>
       </main>
       <Footer />

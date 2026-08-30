@@ -20,6 +20,7 @@ function Hero() {
               <a className="btn btn-primary" href="#journey">
                 Start with Tshiamo's journey →
               </a>
+                 
               <a className="btn btn-pink" href="#donate">
                 Donate
               </a>

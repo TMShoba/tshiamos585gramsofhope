@@ -886,7 +886,8 @@ footer .container{
   }
   .hero-grid,
   .story-grid,
-  .contact-grid{
+  .contact-grid
+ .bank-grid{
     grid-template-columns:1fr;
   }
   .hero-logo-card{
@@ -1343,4 +1344,112 @@ footer .container{
 }
 .memory-tag--hope{
   background: linear-gradient(135deg, var(--gold), #e7cd94);
+}
+
+
+/* =========================================================
+   DONATE
+========================================================= */
+.donate-ref-box{
+  background: linear-gradient(135deg, var(--deep), var(--purple));
+  color:white;
+  border-radius:28px;
+  padding:36px;
+  text-align:center;
+  box-shadow:var(--shadow);
+  margin-bottom:36px;
+}
+.donate-ref-code{
+  font-family:'Courier New', monospace;
+  font-size:28px;
+  font-weight:800;
+  letter-spacing:.08em;
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius:14px;
+  padding:12px 22px;
+  display:inline-block;
+  margin:14px 0;
+}
+.donate-ref-actions{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+.donate-ref-note{
+  color:#eadff2;
+  font-size:13.5px;
+  max-width:480px;
+  margin:16px auto 0;
+}
+.bank-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:24px;
+}
+.bank-card{
+  background:white;
+  border: 1px solid #eadff0;
+  border-radius:var(--radius);
+  padding:28px;
+  box-shadow: 0 8px 25px rgba(50,25,77,.05);
+}
+.bank-card h3{
+  font-family:Georgia,serif;
+  color:var(--deep);
+  font-size:20px;
+  margin-bottom:4px;
+}
+.bank-card-note{
+  color:var(--muted);
+  font-size:12.5px;
+  margin-bottom:16px;
+}
+.bank-field{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:11px 0;
+  border-bottom:1px dashed #eadff0;
+}
+.bank-field:last-child{
+  border-bottom:none;
+}
+.bank-field-label{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.bank-field-value{
+  font-family:'Courier New', monospace;
+  font-weight:700;
+  color:var(--deep);
+  font-size:14px;
+  margin-top:2px;
+}
+.copy-btn{
+  border:none;
+  background:var(--lavender);
+  color:var(--purple);
+  font-size:11.5px;
+  font-weight:800;
+  padding:7px 13px;
+  border-radius:999px;
+  cursor:pointer;
+  white-space:nowrap;
+  transition:.15s;
+  flex:0 0 auto;
+}
+.copy-btn:hover{
+  background:var(--purple);
+  color:white;
+}
+.copy-btn.copied{
+  background:var(--blue);
+  color:white;
 }
