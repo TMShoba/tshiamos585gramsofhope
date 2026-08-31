@@ -11,6 +11,7 @@ import EventsPage from './pages/EventsPage.jsx'
 import DictionaryPage from './pages/DictionaryPage.jsx'
 import DonatePage from './pages/DonatePage.jsx'
 import FAQPage from './pages/FAQPage.jsx'
+import GalleryPage from './pages/GalleryPage.jsx'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/dictionary" element={<DictionaryPage />} />
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/faq" element={<FAQPage />} />
+          <Route path="/journey" element={<GalleryPage />} />
         </Routes>
       </main>
       <Footer />

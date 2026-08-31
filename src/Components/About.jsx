@@ -6,6 +6,10 @@ const storyParagraphs = [
   "What began as a personal story of overcoming adversity grew into a mission to help others navigating similar journeys. Tshiamo's Hope Foundation was founded to provide encouragement, education, and support to families of premature and critically ill newborns while raising awareness about prematurity and its impact on families and communities.",
   "The foundation believes that every premature baby deserves a fighting chance and that no parent should face the NICU journey alone. Through awareness campaigns, community outreach initiatives, family support programs, and partnerships with healthcare institutions, Tshiamo's Hope Foundation seeks to bring hope to families during some of the most difficult moments of their lives.",
   "A key milestone in this mission is the publication of 585 Grams of Hope - Tshiamo's Fight to Live, a memoir that shares Tshiamo's inspiring journey and serves as a source of hope and encouragement for parents facing similar circumstances.",
+  " ",
+  " ",
+   " ",
+  "Founder is Precious Risimati"
 ]
 
 function About() {
@@ -31,7 +35,7 @@ function About() {
     <section className="section" id="about">
       <div className="container">
         <div className="section-head">
-          <div className="kicker">About Us</div>
+          <div className="kicker">About</div>
           <h2>Our story, vision and mission.</h2>
           <p className="lead">
             A foundation built around hope, awareness, compassion and

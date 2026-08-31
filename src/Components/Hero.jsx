@@ -1,33 +1,33 @@
+import { Link } from 'react-router-dom'
 import logo from '../assets/logo.jpeg'
 
 function Hero() {
-    return (
-      <section className="hero" id="home">
-        <div className="container hero-grid">
-          <div>
-            <div className="eyebrow">Every tiny life matters</div>
-            <h1>
-              585 grams.
-              <br />
-              <span>A lifetime of hope.</span>
-            </h1>
-            <p>
-              Tshiamos 585 Grams of Hope Foundation is a place for awareness,
-              education, encouragement and practical support for premature
-              babies and their families.
-            </p>
-            <div className="hero-actions">
-              <a className="btn btn-primary" href="#journey">
-                Start with Tshiamo's journey →
-              </a>
-                 
-              <a className="btn btn-pink" href="#donate">
-                Donate
-              </a>
-              <a className="btn btn-light" href="#support">
-                Get support
-              </a>
-            </div>
+  return (
+    <section className="hero" id="home">
+      <div className="container hero-grid">
+        <div>
+          <div className="eyebrow">Every tiny life matters</div>
+          <h1>
+            585 grams.
+            <br />
+            <span>A lifetime of hope.</span>
+          </h1>
+          <p>
+            Tshiamos 585 Grams of Hope Foundation is a place for awareness,
+            education, encouragement and practical support for premature
+            babies and their families.
+          </p>
+          <div className="hero-actions">
+            <Link className="btn btn-primary" to="/journey">
+              Start with Tshiamo's journey →
+            </Link>
+            <Link className="btn btn-pink" to="/donate">
+              Donate
+            </Link>
+            <a className="btn btn-light" href="#support">
+              Get support
+            </a>
+          </div>
    
             {/* <div className="hero-social">
               <div className="hero-social-title">Follow our journey</div>

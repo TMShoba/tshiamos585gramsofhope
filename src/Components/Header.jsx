@@ -4,15 +4,15 @@ import Countdown from './Countdown.jsx'
 import logo from '../assets/logo.jpeg'
 
 const primaryLinks = [
-  { to: '/about', label: 'About Us' },
-  { to: '/nicu', label: 'NICU Journey' },
+  { to: '/about', label: 'About' },
+  { to: '/prematurity', label: 'Prematurity' },
   { to: '/resources', label: 'Resources' },
   { to: '/get-involved', label: 'Get Involved' },
   { to: '/events', label: 'Events' },
 ]
 
 const moreLinks = [
-  { to: '/prematurity', label: 'Prematurity' },
+  { to: '/nicu', label: 'NICU Journey' },
   { to: '/dictionary', label: 'Dictionary' },
   { to: '/#stories', label: 'Stories' },
   { to: '/faq', label: 'FAQ' },
