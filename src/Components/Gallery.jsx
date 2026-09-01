@@ -26,21 +26,25 @@ const milestones = [
   {
     type: 'image',
     src: imgIncubator,
+    date: '23 November 2023',
     caption: 'The very beginning — 585 grams of fight.',
   },
   {
     type: 'video',
     src: videoNicu,
+    date: '14 February 2024',
     caption: 'A short clip from our NICU days together.',
   },
   {
     type: 'image',
     src: imgChristmasNicu,
+    date: '25 December 2023',
     caption: 'Christmas in the NICU — celebrating together, machines and all.',
   },
   {
     type: 'image',
     src: imgNicuTeam,
+    date: '4 May 2024',
     caption: 'A good day with the incredible NICU team who became family.',
   },
   {
@@ -66,16 +70,19 @@ const milestones = [
   {
     type: 'image',
     src: imgDedication,
+    date: '4 May 2024',
     caption: "A blessing and a thank you — Tshiamo's dedication day.",
   },
   {
     type: 'image',
     src: imgFirstBirthdayA,
+    date: '14 October 2024',
     caption: 'Turning one — the milestone we prayed for.',
   },
   {
     type: 'image',
     src: imgFirstBirthdayB,
+    date: '14 October 2024',
     caption: 'Cake, curiosity, and a whole lot of joy.',
   },
   {
@@ -86,16 +93,19 @@ const milestones = [
   {
     type: 'image',
     src: imgSecondBirthday,
+    date: '14 October 2025',
     caption: 'Two years old, and thriving.',
   },
   {
     type: 'image',
     src: imgSiblings,
-    caption: 'Big brothers, big love.',
+    date: '14 October 2026',
+    caption: 'Life at home, Tshiamo with her brothers Odirile and Oreendiste',
   },
   {
     type: 'image',
     src: imgPlaytimeA,
+    date: '07 August 2026',
     caption: "Just an ordinary afternoon — the kind we once weren't sure we'd get.",
   },
 ]
@@ -150,7 +160,8 @@ function Gallery() {
                   <img className="gallery-media" src={item.src} alt={item.caption} />
                 </button>
               )}
-              <p className="gallery-caption">{item.caption}</p>
+       <p className="gallery-date">{item.date}</p>
+       <p className="gallery-caption">{item.caption}</p>
             </div>
           ))}
         </div>
@@ -183,6 +194,7 @@ function Gallery() {
               src={milestones[activeIndex].src}
               alt={milestones[activeIndex].caption}
             />
+            <p className="lightbox-date">{milestones[activeIndex].date}</p>
             <p className="lightbox-caption">{milestones[activeIndex].caption}</p>
           </div>
         </div>
@@ -192,3 +204,4 @@ function Gallery() {
 }
 
 export default Gallery
+

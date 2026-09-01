@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react'
 function nextNovember() {
   const now = new Date()
   const year = now.getFullYear()
-  let target = new Date(year, 10, 1, 0, 0, 0)
+  let target = new Date(year, 10, 15, 0, 0, 0)
   if (now >= target) {
-    target = new Date(year + 1, 10, 1, 0, 0, 0)
+    target = new Date(year + 1, 10, 15, 0, 0, 0)
   }
   return target
 }
@@ -21,9 +21,9 @@ function getSnapshot() {
   const seconds = Math.floor((diff % 60000) / 1000)
 
   const message =
-    now.getMonth() === 10
+  now.getMonth() === 10 && now.getDate() >= 15
       ? 'Prematurity Awareness Month is here — every tiny life matters.'
-      : 'Counting down to November 1 — Prematurity Awareness Month.'
+      : 'Counting down to November 15 — Prematurity Awareness Month.'
 
   return { days, hours, minutes, seconds, message }
 }
