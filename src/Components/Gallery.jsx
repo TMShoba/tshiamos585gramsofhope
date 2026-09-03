@@ -99,7 +99,7 @@ const milestones = [
   {
     type: 'image',
     src: imgSiblings,
-    date: '14 October 2026',
+    date: '14 October 2024',
     caption: 'Life at home, Tshiamo with her brothers Odirile and Oreendiste',
   },
   {

@@ -4,7 +4,7 @@ import { useState } from 'react'
 // ⚠️ REPLACE THESE WITH THE FOUNDATION'S REAL BANK DETAILS
 // ─────────────────────────────────────────────────────────
 const accountName = 'Tshiamos 585 Grams of Hope Foundation'
-const contactEmail = 'hello@tshiamos585.org'
+const contactEmail = 'info@tshiamos585gramsofhope.org'
 
 const localBankDetails = [
   { label: 'Bank', value: '[Your Bank Name]' },
@@ -22,28 +22,6 @@ const intlBankDetails = [
   { label: 'Bank Address', value: '[Branch Address, City, Country]' },
 ]
 // ─────────────────────────────────────────────────────────
-
-function generateReference() {
-  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789'
-  let code = ''
-  for (let i = 0; i < 6; i += 1) {
-    code += chars[Math.floor(Math.random() * chars.length)]
-  }
-  return `858-${code}`
-}
-
-function loadReference() {
-  if (typeof window === 'undefined') return generateReference()
-  try {
-    const existing = window.sessionStorage.getItem('tshiamos-donate-ref')
-    if (existing) return existing
-    const fresh = generateReference()
-    window.sessionStorage.setItem('tshiamos-donate-ref', fresh)
-    return fresh
-  } catch {
-    return generateReference()
-  }
-}
 
 function copyToClipboard(value) {
   if (navigator.clipboard && navigator.clipboard.writeText) {
@@ -77,7 +55,7 @@ function BankCard({ title, note, fields, copiedField, onCopy }) {
 }
 
 function Donate() {
-  const [reference] = useState(loadReference)
+
   const [copiedField, setCopiedField] = useState('')
 
   const handleCopy = (fieldKey, value) => {
@@ -92,12 +70,12 @@ function Donate() {
   }
 
   const mailtoHref = `mailto:${contactEmail}?subject=${encodeURIComponent(
-    `Donation Reference ${reference}`
+    'Donation Proof of Payment'
   )}&body=${encodeURIComponent(
-    `Hi Tshiamos 585 Grams of Hope Foundation,\n\nI've made an EFT donation using reference ${reference}.\n\nName:\nAmount:\nDate paid:\n\nThank you!`
+    "Hi Tshiamos 585 Grams of Hope Foundation,\n\nI've made an EFT donation. Please find my proof of payment attached.\n\nName:\nAmount:\nDate paid:\n\nThank you!"
   )}`
 
-  return (
+   return (
     <section className="section" id="donate">
       <div className="container">
         <div className="section-head">
@@ -105,32 +83,10 @@ function Donate() {
           <h2>Every gift helps a family feel less alone.</h2>
           <p className="lead">
             We don't yet have online card payments set up, so donations are
-            made by direct bank transfer (EFT). Use the reference below so we
-            can match your payment and say thank you.
-          </p>
-        </div>
+            made by direct bank transfer (EFT). Please use your name as the
+            payment reference, then send us your proof of payment so we can
+            confirm and thank you.
 
-        <div className="donate-ref-box">
-          <div className="kicker" style={{ color: '#e7c9f7' }}>
-            Your Donation Reference
-          </div>
-          <div className="donate-ref-code">{reference}</div>
-          <div className="donate-ref-actions">
-            <button
-              type="button"
-              className={`copy-btn${copiedField === 'reference' ? ' copied' : ''}`}
-              onClick={() => handleCopy('reference', reference)}
-            >
-              {copiedField === 'reference' ? 'Copied!' : 'Copy Reference'}
-            </button>
-            <a className="btn btn-pink" href={mailtoHref}>
-              Email Proof of Payment →
-            </a>
-          </div>
-          <p className="donate-ref-note">
-            Use this reference in your EFT payment description, then email us
-            your proof of payment so we can confirm and acknowledge your
-            donation.
           </p>
         </div>
 
@@ -150,6 +106,22 @@ function Donate() {
             onCopy={handleCopy}
           />
         </div>
+        <div className="remember-box" style={{ marginTop: '32px' }}>
+          <strong>How to Submit Your Proof of Payment</strong>
+          <p>
+            1. Make your EFT using the banking details above, using your name
+            and surname as the payment reference.
+            <br />
+            2. Email your proof of payment to {contactEmail}, along with your
+            name and the date paid.
+          </p>
+          
+            className="btn btn-light"
+            href={mailtoHref}
+            style={{ marginTop: '16px', display: 'inline-block' }}
+      
+            Email Proof of Payment →
+       </div>
       </div>
     </section>
   )

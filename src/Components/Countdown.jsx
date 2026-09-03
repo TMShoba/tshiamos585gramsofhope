@@ -1,19 +1,10 @@
 import { useEffect, useState } from 'react'
 
-function nextNovember() {
-  const now = new Date()
-  const year = now.getFullYear()
-  let target = new Date(year, 10, 15, 0, 0, 0)
-  if (now >= target) {
-    target = new Date(year + 1, 10, 15, 0, 0, 0)
-  }
-  return target
-}
+const TARGET_DATE = new Date(2026, 10, 15, 0, 0, 0) // 15 November 2026
 
 function getSnapshot() {
   const now = new Date()
-  const target = nextNovember()
-  const diff = Math.max(0, target.getTime() - now.getTime())
+  const diff = Math.max(0, TARGET_DATE.getTime() - now.getTime())
 
   const days = Math.floor(diff / 86400000)
   const hours = Math.floor((diff % 86400000) / 3600000)
@@ -21,9 +12,9 @@ function getSnapshot() {
   const seconds = Math.floor((diff % 60000) / 1000)
 
   const message =
-  now.getMonth() === 10 && now.getDate() >= 15
-      ? 'Prematurity Awareness Month is here — every tiny life matters.'
-      : '15 November 2026 Counting down to World Prematurity Day'
+    now.getTime() >= TARGET_DATE.getTime()
+      ? 'World Prematurity Day is here — every tiny life matters.'
+      : 'Counting down to World Prematurity Day'
 
   return { days, hours, minutes, seconds, message }
 }
@@ -39,14 +30,9 @@ function Countdown() {
   }, [])
 
   return (
-    <div
-      className="nav-countdown"
-      aria-label="Prematurity Awareness Month countdown"
-    >
+    <div className="nav-countdown" aria-label="World Prematurity Day countdown">
       <div className="container nav-countdown-inner">
-        <p className="nav-countdown-label">
-          <span>November</span> Prematurity Awareness Month
-        </p>
+        <p className="nav-countdown-label">To: 15 November 2026</p>
         <p className="nav-countdown-message" aria-live="polite">
           {snapshot.message}
         </p>
