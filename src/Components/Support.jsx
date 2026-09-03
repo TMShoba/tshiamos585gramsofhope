@@ -23,14 +23,17 @@ function Support() {
           <div className="contact-card">
             <h3>Support &amp; Enquiries</h3>
             <p>
-              <strong>Email:</strong> hello@tshiamos585.org
+              <strong>Email:</strong> info@tshiamos585gramsofhope.org
+            </p>
+            <p>
+              <strong>Contact Number:</strong> 078 868 2623
             </p>
             <p>
               <strong>Location:</strong> South Africa
             </p>
             <a
               className="btn btn-light"
-              href="mailto:hello@tshiamos585.org"
+              href="info@tshiamos585gramsofhope.org"
               style={{ marginTop: '15px' }}
             >
               Send an Email →

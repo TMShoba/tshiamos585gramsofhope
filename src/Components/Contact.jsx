@@ -8,7 +8,7 @@ import { useState } from 'react'
 // fallback "email us directly" message.
 // ─────────────────────────────────────────────────────────
 const FORM_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID'
-const contactEmail = 'hello@tshiamos585.org'
+const contactEmail = 'info@tshiamos585gramsofhope.org'
 
 const initialForm = {
   name: '',
@@ -174,6 +174,9 @@ function Contact() {
             <h3 style={{ color: 'var(--deep)' }}>Foundation Enquiries</h3>
             <p style={{ color: 'var(--muted)' }}>
               <strong>Email:</strong> {contactEmail}
+            </p>
+            <p style={{ color: 'var(--muted)' }}>
+              <strong>Contact Number:</strong> 078 868 2623
             </p>
             <p style={{ color: 'var(--muted)' }}>
               <strong>Location:</strong> South Africa

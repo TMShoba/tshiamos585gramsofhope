@@ -1765,3 +1765,19 @@ footer .container{
   margin: 16px 0 8px;
   text-align:center;
 }
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: #0f766e;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: #115e59;
+}

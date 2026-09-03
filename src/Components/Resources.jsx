@@ -1,3 +1,5 @@
+import { FaDownload } from 'react-icons/fa'
+
 const resourceIntros = [
   {
     title: 'NICU Resources',
@@ -39,7 +41,7 @@ const templates = [
       'Feeding and growth questions',
       'Discharge preparation questions',
     ],
-    file: 'Medical-Team-Questions-Template.pdf',
+    file: '/templates/Medical-Team-Questions-Template.pdf',
   },
   {
     title: 'Premature Baby Milestone Tracker',
@@ -171,10 +173,11 @@ function Resources() {
                   </span>
                 ))}
               </div>
-              <div className="resource-download">
-                <span className="bank-field-value">{tpl.file}</span>
-                <span className="memory-badge">Coming soon</span>
-              </div>
+      <div className="resource-download">
+        <a href={tpl.file} download>
+          Download PDF
+        </a>
+      </div>
             </div>
           ))}
         </div>

@@ -8,15 +8,11 @@ const faqs = [
   },
   {
     q: 'Is the foundation a registered non-profit?',
-    a: '[Add your NPO/PBO registration number here once available.] We believe in being transparent with our supporters about our registration status.',
+    a: 'Yes, The registration number is [2026/ 705598 /08] We believe in being transparent with our supporters about our registration status.',
   },
   {
     q: 'How can I donate?',
     a: "Visit our Donate page for local EFT and international wire transfer details, along with a unique reference code to include with your payment so we can confirm it's yours.",
-  },
-  {
-    q: 'Will I receive a tax certificate for my donation?',
-    a: '[Add Section 18A tax certificate information here once your PBO status is confirmed with SARS.]',
   },
   {
     q: 'How can I volunteer or partner with the foundation?',
@@ -32,7 +28,7 @@ const faqs = [
   },
   {
     q: 'Where is the foundation based?',
-    a: '[Add your city/region here.] We are based in South Africa and support families locally and internationally.',
+    a: '[Johannesburg/Ormonde] We are based in South Africa and support families locally and internationally.',
   },
   {
     q: "I'm a NICU parent right now — can you help directly?",

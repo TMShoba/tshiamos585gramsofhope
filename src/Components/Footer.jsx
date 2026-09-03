@@ -10,7 +10,7 @@ function Footer() {
             <span className="footer-social-text">Follow us:</span>
             <a
               className="social-link"
-              href="https://www.facebook.com/tshiamos585grams"
+              href="https://www.facebook.com/share/1JNCVYMxZR/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -19,7 +19,7 @@ function Footer() {
             </a>
             <a
               className="social-link instagram"
-              href="https://www.instagram.com/tshiamos585grams"
+              href="https://www.instagram.com/tshia.mo585?igsi=cHl3MzViZGh0YTBv"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"

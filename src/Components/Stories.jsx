@@ -127,7 +127,7 @@ function Stories() {
     <section className="section story" id="stories">
       <div className="container">
         <div className="section-head">
-          <div className="kicker">5 • Memory Wall</div>
+          <div className="kicker">Memory Wall</div>
           <h2>Remember. Celebrate. Honour.</h2>
           <p className="lead">
             A space for families to share memories, milestones, photographs

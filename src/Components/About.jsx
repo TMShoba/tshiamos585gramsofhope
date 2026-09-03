@@ -1,15 +1,16 @@
 import { useEffect, useState } from 'react'
 
 const storyParagraphs = [
-  "Tshiamo's Hope Foundation was established in September 2026 from a deeply personal journey of faith, resilience, and hope. The foundation was inspired by the remarkable story of Tshiamo, who was born prematurely weighing in 2023 only 585 grams and faced a challenging fight for survival in the Neonatal Intensive Care Unit (NICU).",
+  "Tshiamo's Hope Foundation was established in September 2026 from a deeply personal journey of faith, resilience, and hope. The foundation was inspired by the remarkable story of Tshiamo, who was born prematurely in 2023 weighing only 585 grams and faced a challenging fight for survival in the Neonatal Intensive Care Unit (NICU).",
   "Like many parents of premature babies, Tshiamo's family experienced the emotional, physical, and financial challenges that accompany an extended NICU stay. The uncertainty, fear, and isolation often felt by families during this period revealed a critical need for greater support, awareness, and advocacy for premature babies and their parents.",
   "What began as a personal story of overcoming adversity grew into a mission to help others navigating similar journeys. Tshiamo's Hope Foundation was founded to provide encouragement, education, and support to families of premature and critically ill newborns while raising awareness about prematurity and its impact on families and communities.",
   "The foundation believes that every premature baby deserves a fighting chance and that no parent should face the NICU journey alone. Through awareness campaigns, community outreach initiatives, family support programs, and partnerships with healthcare institutions, Tshiamo's Hope Foundation seeks to bring hope to families during some of the most difficult moments of their lives.",
   "A key milestone in this mission is the publication of 585 Grams of Hope - Tshiamo's Fight to Live, a memoir that shares Tshiamo's inspiring journey and serves as a source of hope and encouragement for parents facing similar circumstances.",
   " ",
   " ",
-   " ",
-  "Founder is Precious Risimati"
+  " ",
+  "Precious Risimati",
+  "Founder"
 ]
 
 function About() {

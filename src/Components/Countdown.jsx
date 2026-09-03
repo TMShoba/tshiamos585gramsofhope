@@ -23,7 +23,7 @@ function getSnapshot() {
   const message =
   now.getMonth() === 10 && now.getDate() >= 15
       ? 'Prematurity Awareness Month is here — every tiny life matters.'
-      : 'Counting down to November 15 — Prematurity Awareness Month.'
+      : '15 November 2026 Counting down to World Prematurity Day'
 
   return { days, hours, minutes, seconds, message }
 }
@@ -45,7 +45,7 @@ function Countdown() {
     >
       <div className="container nav-countdown-inner">
         <p className="nav-countdown-label">
-          <span>Nov</span> Prematurity Awareness Month
+          <span>November</span> Prematurity Awareness Month
         </p>
         <p className="nav-countdown-message" aria-live="polite">
           {snapshot.message}
