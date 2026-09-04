@@ -30,10 +30,10 @@ const milestones = [
     caption: 'The very beginning — 585 grams of fight.',
   },
   {
-    type: 'video',
-    src: videoNicu,
-    date: '14 February 2024',
-    caption: 'A short clip from our NICU days together.',
+    type: 'image',
+    src: imgNicuTeam,
+    date: '4 May 2024',
+    caption: 'A good day with the incredible NICU team who became family.',
   },
   {
     type: 'image',
@@ -42,10 +42,10 @@ const milestones = [
     caption: 'Christmas in the NICU — celebrating together, machines and all.',
   },
   {
-    type: 'image',
-    src: imgNicuTeam,
-    date: '4 May 2024',
-    caption: 'A good day with the incredible NICU team who became family.',
+    type: 'video',
+    src: videoNicu,
+    date: '14 February 2024',
+    caption: 'A short clip from our NICU days together.',
   },
   {
     type: 'image',
@@ -88,7 +88,7 @@ const milestones = [
   {
     type: 'image',
     src: imgTraditionalWrap,
-    caption: 'Wrapped in tradition and love.',
+    caption: 'Wrapped in tradition and love with Big sister Paballo',
   },
   {
     type: 'image',
@@ -100,7 +100,7 @@ const milestones = [
     type: 'image',
     src: imgSiblings,
     date: '14 October 2024',
-    caption: 'Life at home, Tshiamo with her brothers Odirile and Oreendiste',
+    caption: 'Life at home, Tshiamo with her brother Odirile and Oreediste',
   },
   {
     type: 'image',
