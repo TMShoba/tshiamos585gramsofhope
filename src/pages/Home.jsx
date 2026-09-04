@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom'
 import Hero from '../Components/Hero.jsx'
 import QuickActions from '../Components/QuickActions.jsx'
 import Journey from '../Components/Journey.jsx'
+import Tribute from '../Components/Tribute.jsx'
 import Stories from '../Components/Stories.jsx'
 import Support from '../Components/Support.jsx'
 import Contact from '../Components/Contact.jsx'
@@ -30,6 +31,7 @@ function Home() {
       <Hero />
       <QuickActions />
       <Journey />
+      <Tribute />
       <Stories />
       <Support />
       <Contact />

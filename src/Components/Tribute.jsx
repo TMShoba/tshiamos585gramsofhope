@@ -17,16 +17,6 @@ const tributes = [
         '[Add a thank-you message for the day-to-day care, patience, and comfort they gave your family.]',
     },
     {
-      name: '[Family Member Name]',
-      role: 'Family',
-      message: '[Add a thank-you message for the support they gave during the hardest days.]',
-    },
-    {
-      name: '[Friend Name]',
-      role: 'Friend',
-      message: '[Add a thank-you message for showing up when it mattered most.]',
-    },
-    {
       name: '[Hospital / Unit Name]',
       role: 'Hospital',
       message: '[Add a thank-you message for the facility and care team as a whole.]',

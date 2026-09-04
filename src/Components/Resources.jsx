@@ -1,5 +1,3 @@
-import { FaDownload } from 'react-icons/fa'
-
 const resourceIntros = [
   {
     title: 'NICU Resources',
@@ -31,7 +29,8 @@ const templates = [
       'Daily milestones',
       'Parent reflections',
     ],
-    file: 'NICU-Daily-Journal.pdf',
+    file: 'NICU-Daily-Journal-Template-Updated.pdf',
+    downloadUrl: '/resources/NICU-Daily-Journal.pdf',
   },
   {
     title: 'Questions to Ask Your Medical Team',
@@ -41,7 +40,8 @@ const templates = [
       'Feeding and growth questions',
       'Discharge preparation questions',
     ],
-    file: '/templates/Medical-Team-Questions-Template.pdf',
+    file: 'Questions-to-Ask-Your-Medical-Team.pdf',
+    downloadUrl: '/resources/Medical-Team-Questions-Template.pdf',
   },
   {
     title: 'Premature Baby Milestone Tracker',
@@ -53,7 +53,8 @@ const templates = [
       'Developmental achievements',
       'Going-home checklist',
     ],
-    file: 'Preemie-Milestone-Tracker.pdf',
+    file: 'Premature-Baby-Milestone-Tracker.pdf',
+    downloadUrl: '/resources/Preemie-Milestone-Tracker.pdf',
   },
   {
     title: 'Kangaroo Care Tracker',
@@ -173,11 +174,19 @@ function Resources() {
                   </span>
                 ))}
               </div>
-      <div className="resource-download">
-        <a href={tpl.file} download>
-          Download PDF
-        </a>
-      </div>
+              {tpl.downloadUrl ? (
+                <div className="resource-download">
+                  <span className="bank-field-value">{tpl.file}</span>
+                  <a className="copy-btn" href={tpl.downloadUrl} download>
+                    Download →
+                  </a>
+                </div>
+              ) : (
+                <div className="resource-download">
+                  <span className="bank-field-value">{tpl.file}</span>
+                  <span className="memory-badge">Coming soon</span>
+                </div>
+              )}
             </div>
           ))}
         </div>

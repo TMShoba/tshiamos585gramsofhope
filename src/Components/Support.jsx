@@ -1,3 +1,5 @@
+const contactEmail = 'info@tshiamos585gramsofhope.org'
+
 function Support() {
     return (
       <section className="section contact" id="support">
@@ -33,8 +35,8 @@ function Support() {
             </p>
             <a
               className="btn btn-light"
-              href="info@tshiamos585gramsofhope.org"
-              style={{ marginTop: '15px' }}
+              href={`mailto:${contactEmail}`}
+              style={{ marginTop: '12px' }}
             >
               Send an Email →
             </a>
@@ -43,5 +45,6 @@ function Support() {
       </section>
     )
   }
-   
+      
   export default Support
+

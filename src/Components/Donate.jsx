@@ -14,13 +14,13 @@ const localBankDetails = [
   { label: 'Account Type', value: '[Cheque / Current]' },
 ]
 
-const intlBankDetails = [
-  { label: 'Bank', value: '[Your Bank Name]' },
-  { label: 'Account Name', value: accountName },
-  { label: 'Account Number / IBAN', value: '[Your Account Number or IBAN]' },
-  { label: 'SWIFT / BIC Code', value: '[XXXXXXXX]' },
-  { label: 'Bank Address', value: '[Branch Address, City, Country]' },
-]
+// const intlBankDetails = [
+//   { label: 'Bank', value: '[Your Bank Name]' },
+//   { label: 'Account Name', value: accountName },
+//   { label: 'Account Number / IBAN', value: '[Your Account Number or IBAN]' },
+//   { label: 'SWIFT / BIC Code', value: '[XXXXXXXX]' },
+//   { label: 'Bank Address', value: '[Branch Address, City, Country]' },
+// ]
 // ─────────────────────────────────────────────────────────
 
 function copyToClipboard(value) {
@@ -82,10 +82,9 @@ function Donate() {
           <div className="kicker">Donate</div>
           <h2>Every gift helps a family feel less alone.</h2>
           <p className="lead">
-            We don't yet have online card payments set up, so donations are
-            made by direct bank transfer (EFT). Please use your name as the
-            payment reference, then send us your proof of payment so we can
-            confirm and thank you.
+            Donations are made by direct bank transfer (EFT). Please use your name as the
+            payment reference, then send us your proof of payment so we can confirm and
+            thank you.
 
           </p>
         </div>
@@ -98,30 +97,15 @@ function Donate() {
             copiedField={copiedField}
             onCopy={handleCopy}
           />
-          <BankCard
+          {/* <BankCard
             title="International — Wire Transfer"
             note="Your bank may charge intermediary/correspondent fees for international transfers."
             fields={intlBankDetails}
             copiedField={copiedField}
             onCopy={handleCopy}
-          />
+          /> */}
         </div>
-        <div className="remember-box" style={{ marginTop: '32px' }}>
-          <strong>How to Submit Your Proof of Payment</strong>
-          <p>
-            1. Make your EFT using the banking details above, using your name
-            and surname as the payment reference.
-            <br />
-            2. Email your proof of payment to {contactEmail}, along with your
-            name and the date paid.
-          </p>
-          
-            className="btn btn-light"
-            href={mailtoHref}
-            style={{ marginTop: '16px', display: 'inline-block' }}
-      
-            Email Proof of Payment →
-       </div>
+        
       </div>
     </section>
   )

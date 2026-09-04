@@ -32,7 +32,7 @@ function Countdown() {
   return (
     <div className="nav-countdown" aria-label="World Prematurity Day countdown">
       <div className="container nav-countdown-inner">
-        <p className="nav-countdown-label">To: 15 November 2026</p>
+        <p className="nav-countdown-label">15 November 2026</p>
         <p className="nav-countdown-message" aria-live="polite">
           {snapshot.message}
         </p>

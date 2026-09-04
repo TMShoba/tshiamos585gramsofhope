@@ -21,7 +21,7 @@ const faqs = [
   {
     q: 'What is the Memory Wall, and is my information public?',
     a: "The Memory Wall lets families share a photo, memory, or milestone. Right now, entries are saved privately in your own browser rather than shared publicly across all visitors — we're working on making it a fully shared community wall in future.",
-  },
+  }, 
   {
     q: 'How do I share my success story or a message of hope?',
     a: 'On the Memory Wall section of our homepage, you\'ll find "Share Your Story" and "Tell Your Story" buttons that open a short form for Success Stories and Hope Stories.',
@@ -40,7 +40,7 @@ const faqs = [
       <>
         Use the contact form on our{' '}
         <Link to="/#contact">Contact page</Link>, or email us directly at{' '}
-        hello@tshiamos585.org.
+        info@tshiamos585gramsofhope.org.
       </>
     ),
   },
