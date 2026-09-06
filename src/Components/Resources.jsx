@@ -59,14 +59,17 @@ const templates = [
   {
     title: 'Kangaroo Care Tracker',
     text: 'Monitor skin-to-skin sessions and observe the benefits for both parent and baby.',
-    includes: ['Date and time', 'Duration of session', "Baby's response", 'Parent observations'],
+    includes: ['Date and time', 'Duration of session', "Baby's response", 'Parent observations'  
+    ],
     file: 'Kangaroo-Care-Tracker.pdf',
+    downloadUrl: '/resources/Kangaroo_Care_Tracker.pdf',
   },
   {
     title: 'NICU Feeding Log',
     text: "Track feeding schedules and monitor your baby's nutritional progress.",
     includes: ['Feeding times', 'Feeding method', 'Volume consumed', 'Notes and observations'],
     file: 'NICU-Feeding-Log.pdf',
+    downloadUrl: '/resources/NICU_Feeding_Log.pdf',
   },
   {
     title: 'Medication and Appointments Tracker',
@@ -78,6 +81,7 @@ const templates = [
       'Healthcare provider contacts',
     ],
     file: 'Medication-Appointment-Tracker.pdf',
+    downloadUrl: '/resources/Medication_Appointments_Tracker.pdf',
   },
   {
     title: 'NICU Hospital Bag Checklist',
@@ -90,6 +94,7 @@ const templates = [
       'Self-care essentials',
     ],
     file: 'NICU-Hospital-Bag-Checklist.pdf',
+    downloadUrl: '/resources/NICU_Hospital_Bag_Checklist.pdf',
   },
   {
     title: 'Emotional Wellness Check-In',
@@ -101,6 +106,7 @@ const templates = [
       'Support contact list',
     ],
     file: 'Parent-Wellness-Tracker.pdf',
+    downloadUrl: '/resources/Emotional_Wellness_Checkin.pdf',
   },
   {
     title: 'NICU Discharge Planning Checklist',
@@ -113,6 +119,7 @@ const templates = [
       'Home preparation checklist',
     ],
     file: 'NICU-Discharge-Checklist.pdf',
+    downloadUrl: '/resources/NICU_Discharge_Planning_Checklist.pdf',
   },
   {
     title: 'Memory & Milestones Keepsake',
@@ -126,6 +133,7 @@ const templates = [
       'Photos and personal notes',
     ],
     file: 'NICU-Memory-Book.pdf',
+    downloadUrl: '/resources/Memory_Milestones_Keepsake.pdf',
   },
 ]
 
