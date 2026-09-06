@@ -742,6 +742,24 @@ h2{
   line-height:1;
   cursor:pointer;
 }
+.story-signature {
+  margin-top: 2rem;
+  text-align: right;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 1.5rem;
+}
+
+.story-signature-name {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.story-signature-title {
+  margin: 0.25rem 0 0;
+  color: #666;
+  font-style: italic;
+}
  
 /* =========================================================
    MEDICAL DICTIONARY
