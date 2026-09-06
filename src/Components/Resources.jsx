@@ -30,7 +30,7 @@ const templates = [
       'Parent reflections',
     ],
     file: 'NICU-Daily-Journal-Template-Updated.pdf',
-    downloadUrl: '/resources/NICU-Daily-Journal.pdf',
+    downloadUrl: '/resources/NICU_Parent_Daily_Journal.pdf',
   },
   {
     title: 'Questions to Ask Your Medical Team',
@@ -41,7 +41,7 @@ const templates = [
       'Discharge preparation questions',
     ],
     file: 'Questions-to-Ask-Your-Medical-Team.pdf',
-    downloadUrl: '/resources/Medical-Team-Questions-Template.pdf',
+    downloadUrl: '/resources/Questions_For_Medical_Team.pdf',
   },
   {
     title: 'Premature Baby Milestone Tracker',
@@ -54,7 +54,7 @@ const templates = [
       'Going-home checklist',
     ],
     file: 'Premature-Baby-Milestone-Tracker.pdf',
-    downloadUrl: '/resources/Preemie-Milestone-Tracker.pdf',
+    downloadUrl: '/resources/Premature_Baby_Milestone_Tracker.pdf',
   },
   {
     title: 'Kangaroo Care Tracker',
