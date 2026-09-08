@@ -12,9 +12,9 @@ const PAGE_SIZE = 6
 const seedMemories = [
   {
     id: 'seed-1',
-    name: 'Tshiamo T.',
-    weight: '858g',
-    gestationalAge: '24 weeks',
+    name: 'Thato T.',
+    weight: '660g',
+    gestationalAge: '27 weeks',
     moment: 'Kangaroo Care',
     memory:
       "The first time I held him skin-to-skin, his heartbeat matched mine. That hour changed everything.",
