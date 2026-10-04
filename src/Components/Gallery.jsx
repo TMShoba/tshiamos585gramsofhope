@@ -31,15 +31,15 @@ const milestones = [
   },
   {
     type: 'image',
-    src: imgNicuTeam,
-    date: '4 May 2024',
-    caption: 'A good day with the incredible NICU team who became family.',
-  },
-  {
-    type: 'image',
     src: imgChristmasNicu,
     date: '25 December 2023',
     caption: 'Christmas in the NICU — celebrating together, machines and all.',
+  },
+  {
+    type: 'image',
+    src: imgNicuTeam,
+    date: '4 May 2024',
+    caption: 'A good day with the incredible NICU team who became family.',
   },
   {
     type: 'video',
@@ -92,15 +92,15 @@ const milestones = [
   },
   {
     type: 'image',
-    src: imgSecondBirthday,
-    date: '14 October 2025',
-    caption: 'Two years old, and thriving.',
-  },
-  {
-    type: 'image',
     src: imgSiblings,
     date: '14 October 2024',
     caption: 'Life at home, Tshiamo with her brother Odirile and Oreeditse',
+  },
+  {
+    type: 'image',
+    src: imgSecondBirthday,
+    date: '14 October 2025',
+    caption: 'Two years old, and thriving.',
   },
   {
     type: 'image',
