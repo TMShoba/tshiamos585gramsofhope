@@ -11,13 +11,10 @@ function getSnapshot() {
   const minutes = Math.floor((diff % 3600000) / 60000)
   const seconds = Math.floor((diff % 60000) / 1000)
 
-  const message =
-    now.getTime() >= TARGET_DATE.getTime()
-      ? 'World Prematurity Day is here — every tiny life matters.'
-      : 'Counting down to World Prematurity Day'
-
-  return { days, hours, minutes, seconds, message }
+  return { days, hours, minutes, seconds, isToday: diff === 0 }
 }
+
+const pad = (value) => String(value).padStart(2, '0')
 
 function Countdown() {
   const [snapshot, setSnapshot] = useState(getSnapshot)
@@ -29,33 +26,48 @@ function Countdown() {
     return () => clearInterval(timer)
   }, [])
 
+  const units = [
+    { value: snapshot.days, label: 'Days', short: 'D' },
+    { value: pad(snapshot.hours), label: 'Hours', short: 'H' },
+    { value: pad(snapshot.minutes), label: 'Minutes', short: 'M' },
+    { value: pad(snapshot.seconds), label: 'Seconds', short: 'S' },
+  ]
+
   return (
-    <div className="nav-countdown" aria-label="World Prematurity Day countdown">
-<div className="container nav-countdown-inner">
-  <p className="nav-countdown-label">
-    World Prematurity Day <span>15 November</span>
-  </p>
-  <p className="nav-countdown-message" aria-live="polite">
-    {snapshot.message}
-  </p>
-        <div className="countdown-timer" aria-live="polite">
-          <div className="countdown-unit">
-            <strong>{snapshot.days}</strong>
-            <small>Days</small>
-          </div>
-          <div className="countdown-unit">
-            <strong>{String(snapshot.hours).padStart(2, '0')}</strong>
-            <small>Hours</small>
-          </div>
-          <div className="countdown-unit">
-            <strong>{String(snapshot.minutes).padStart(2, '0')}</strong>
-            <small>Minutes</small>
-          </div>
-          <div className="countdown-unit">
-            <strong>{String(snapshot.seconds).padStart(2, '0')}</strong>
-            <small>Seconds</small>
-          </div>
+    <div className="nav-countdown" role="region" aria-label="World Prematurity Day countdown">
+      <div className="container nav-countdown-inner">
+        <div className="nav-countdown-text">
+          <p className="nav-countdown-label">
+            <span className="nav-countdown-dot" aria-hidden="true"></span>
+            World Prematurity Day
+            <span className="nav-countdown-date">15 Nov</span>
+          </p>
+          <p className="nav-countdown-message">
+            {snapshot.isToday
+              ? 'It’s here — every tiny life matters.'
+              : 'Every tiny life matters. Join us in purple.'}
+          </p>
         </div>
+
+        {!snapshot.isToday && (
+          <div
+            className="countdown-timer"
+            aria-label={`${snapshot.days} days, ${snapshot.hours} hours and ${snapshot.minutes} minutes to go`}
+          >
+            {units.map((unit, index) => (
+              <div className="countdown-group" key={unit.label} aria-hidden="true">
+                {index > 0 && <span className="countdown-sep">:</span>}
+                <div className="countdown-unit">
+                  <strong>{unit.value}</strong>
+                  <small>
+                    <span className="countdown-long">{unit.label}</span>
+                    <span className="countdown-short">{unit.short}</span>
+                  </small>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
