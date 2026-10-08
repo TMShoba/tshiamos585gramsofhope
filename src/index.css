@@ -91,16 +91,62 @@ main {
 .brand{
   display:flex;
   align-items:center;
+  gap:10px;
   flex:0 0 auto;
+  min-width:0;
+}
+/* Circular badge; the image is zoomed slightly so the emblem fills it
+   instead of showing the white border around the artwork */
+.brand-badge{
+  width:60px;
+  height:60px;
+  flex:0 0 auto;
+  border-radius:50%;
+  overflow:hidden;
+  background:white;
+  border:2px solid white;
+  box-shadow:
+    0 0 0 1px rgba(116,70,168,.18),
+    0 8px 20px rgba(116,70,168,.22);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.brand:hover .brand-badge{
+  transform:scale(1.04);
+  box-shadow:
+    0 0 0 1px rgba(116,70,168,.3),
+    0 10px 24px rgba(116,70,168,.3);
 }
 .brand-logo{
-  width:56px;
-  height:56px;
-  object-fit:contain;
-  border-radius:50%;
-  background:white;
-  box-shadow: 0 7px 18px rgba(116,70,168,.20);
-  border: 2px solid rgba(233,139,183,.25);
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transform:scale(1.14);
+  filter:saturate(1.25) contrast(1.08);
+}
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  line-height:1.05;
+  white-space:nowrap;
+}
+.brand-name{
+  font-family:Georgia, serif;
+  font-style:italic;
+  font-weight:700;
+  font-size:20px;
+  color:var(--purple);
+  letter-spacing:-.01em;
+}
+.brand-tagline{
+  margin-top:3px;
+  font-size:10.5px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.brand-tagline b{
+  color:var(--pink);
 }
 .nav-links{
   display:flex;
@@ -186,6 +232,12 @@ main {
 .mobile-donate{
   padding:9px 16px;
   font-size:13px;
+  transition:opacity .2s ease, transform .2s ease;
+}
+.mobile-donate.hidden{
+  opacity:0;
+  transform:scale(.9);
+  pointer-events:none;
 }
 
 /* Hamburger button */
@@ -282,65 +334,59 @@ main {
   transition:opacity .25s ease, transform .25s ease, visibility 0s;
 }
 .mobile-nav-inner{
-  padding:18px 0 24px;
+  padding:10px 0 22px;
 }
 .mobile-nav-heading{
   font-size:11px;
   font-weight:850;
   letter-spacing:.14em;
   text-transform:uppercase;
-  color:var(--muted);
-  margin:6px 4px 8px;
-}
-.mobile-nav-heading:not(:first-child){
-  margin-top:18px;
+  color:var(--purple);
+  margin:14px 0 4px;
+  padding-top:14px;
+  border-top:1px solid rgba(116,70,168,.12);
 }
 .mobile-nav-links{
   display:flex;
   flex-direction:column;
-  gap:4px;
 }
 .mobile-nav-links a{
   display:flex;
   align-items:center;
   justify-content:space-between;
-  padding:13px 16px;
-  border-radius:14px;
-  font-size:16px;
+  padding:12px 4px;
+  border-bottom:1px solid rgba(116,70,168,.08);
+  font-size:15px;
   font-weight:700;
   color:var(--ink);
-  transition:background .2s ease, color .2s ease;
+  transition:color .2s ease, padding .2s ease;
+}
+.mobile-nav-links a:last-child{
+  border-bottom:none;
 }
 .mobile-nav-links a span{
   color:var(--pink);
-  font-size:22px;
+  font-size:20px;
   line-height:1;
+  transition:transform .2s ease;
 }
 .mobile-nav-links a:hover,
 .mobile-nav-links a.active{
-  background:var(--lavender);
   color:var(--purple);
 }
-.mobile-nav-links-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-}
-.mobile-nav-links-grid a{
-  justify-content:center;
-  text-align:center;
-  font-size:14px;
-  padding:12px 10px;
-  background:#faf5fd;
-  border:1px solid #eee3f4;
+.mobile-nav-links a:hover span,
+.mobile-nav-links a.active span{
+  transform:translateX(3px);
 }
 .mobile-nav-cta{
   display:flex;
-  gap:12px;
-  margin-top:22px;
+  gap:10px;
+  margin-top:18px;
 }
 .mobile-nav-cta .btn{
   flex:1;
+  padding:11px 18px;
+  font-size:14px;
 }
 
 /* No page scrolling behind the open menu */
@@ -1128,9 +1174,9 @@ footer .container{
   .nav-inner{
     min-height:76px;
   }
-  .brand-logo{
-    width:48px;
-    height:48px;
+  .brand-badge{
+    width:52px;
+    height:52px;
   }
   .nav-links,
   .nav-cta{
@@ -1191,9 +1237,15 @@ footer .container{
     min-height:70px;
     gap:10px;
   }
-  .brand-logo{
-    width:42px;
-    height:42px;
+  .brand-badge{
+    width:48px;
+    height:48px;
+  }
+  .brand-name{
+    font-size:18px;
+  }
+  .brand-tagline{
+    font-size:9.5px;
   }
   .mobile-menu{
     width:42px;
@@ -1331,9 +1383,22 @@ footer .container{
   h1{
     font-size:36px;
   }
-  .brand-logo{
-    width:38px;
-    height:38px;
+  .brand-badge{
+    width:44px;
+    height:44px;
+  }
+  .brand{
+    gap:8px;
+  }
+  .brand-name{
+    font-size:17px;
+  }
+  .brand-tagline{
+    font-size:9px;
+    letter-spacing:.05em;
+  }
+  .mobile-donate{
+    display:none;
   }
   .mobile-menu{
     width:40px;
@@ -2066,4 +2131,242 @@ footer .container{
     opacity: 1;
     transform: scale(1);
   }
+}
+/* =========================================================
+   MOBILE POLISH
+   Kept at the end of the file so it wins over component
+   rules that are declared after the main breakpoints above.
+========================================================= */
+@media(max-width:850px){
+  .bank-grid{
+    grid-template-columns:1fr;
+  }
+  .bank-card{
+    max-width:560px;
+  }
+}
+
+@media(max-width:520px){
+  /* Sections & headings */
+  .section{
+    padding:52px 0;
+  }
+  .section-head{
+    margin-bottom:28px;
+  }
+  h2{
+    font-size:32px;
+  }
+  .lead{
+    font-size:17px;
+    line-height:1.55;
+  }
+
+  /* Cards: lighter padding and tighter headings */
+  .card,
+  .info-box,
+  .bank-card,
+  .contact-card{
+    padding:22px 20px;
+    border-radius:20px;
+  }
+  .card h3,
+  .info-box h3{
+    font-size:21px;
+    line-height:1.25;
+  }
+  .info-box h3{
+    margin-bottom:8px;
+  }
+  .info-box p,
+  .card p{
+    font-size:15px;
+    line-height:1.6;
+  }
+  .icon{
+    width:42px;
+    height:42px;
+    border-radius:13px;
+    font-size:18px;
+    margin-bottom:14px;
+  }
+  .cards,
+  .about-grid,
+  .info-grid-2,
+  .tips-grid,
+  .resource-intro-grid,
+  .involve-grid{
+    gap:14px;
+  }
+  .info-box-story:hover,
+  .info-box-story:focus-visible{
+    transform:none;
+  }
+
+  /* Home: quick actions as compact cards */
+  .quick-grid{
+    gap:10px;
+  }
+  .quick-card{
+    padding:18px 20px;
+    border-radius:18px;
+  }
+  .quick-card strong{
+    font-size:19px;
+  }
+  .quick-card span{
+    margin:4px 0 12px;
+  }
+  .quick-card .btn{
+    padding:9px 16px;
+    font-size:13px;
+  }
+
+  /* Home: 585 card & quote */
+  .number-card{
+    padding:30px 20px;
+    border-radius:24px;
+  }
+  .number-card .big{
+    font-size:76px;
+  }
+  .number-card .unit{
+    font-size:15px;
+  }
+  .quote{
+    font-size:19px;
+    padding-left:16px;
+  }
+
+  /* Memory wall: buttons as compact cards, tabs scroll sideways */
+  .story .card .btn{
+    margin-top:10px;
+    padding:10px 16px;
+    font-size:13px;
+  }
+  .memory-wall-tabs{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    margin:28px -4% 18px;
+    padding:4px 4% 8px;
+    scrollbar-width:none;
+  }
+  .memory-wall-tabs::-webkit-scrollbar{
+    display:none;
+  }
+  .memory-wall-tab{
+    flex:0 0 auto;
+    padding:8px 14px;
+  }
+  .memory-wall-grid{
+    gap:12px;
+  }
+  .memory-badge{
+    font-size:11px;
+  }
+
+  /* Contact */
+  .contact-grid{
+    gap:24px;
+  }
+  .contact-card p{
+    overflow-wrap:anywhere;
+  }
+
+  /* Prematurity: readable gradient box */
+  .remember-box{
+    padding:26px 22px;
+    border-radius:22px;
+    text-align:left;
+  }
+  .remember-box strong{
+    font-size:20px;
+    line-height:1.3;
+  }
+  .remember-box p{
+    font-size:15px;
+    line-height:1.65;
+  }
+
+  /* Dictionary: letters in one swipeable row */
+  .dictionary-letters{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    margin:0 -4% 24px;
+    padding:4px 4% 10px;
+    scrollbar-width:none;
+  }
+  .dictionary-letters::-webkit-scrollbar{
+    display:none;
+  }
+  .dictionary-letters a{
+    flex:0 0 40px;
+    height:40px;
+  }
+  .dictionary-list{
+    gap:16px;
+  }
+  .dictionary-group{
+    padding:20px;
+    border-radius:20px;
+  }
+  .dictionary-letter{
+    width:40px;
+    height:40px;
+    font-size:22px;
+    margin-bottom:12px;
+    border-radius:12px;
+  }
+  .dictionary-term h4{
+    font-size:18px;
+  }
+
+  /* Donate: bank details */
+  .bank-field{
+    padding:12px 0;
+  }
+  .bank-field-value{
+    font-size:14px;
+    overflow-wrap:anywhere;
+  }
+
+  /* Resources: file name on its own line, button full width */
+  .resource-download{
+    flex-direction:column;
+    align-items:stretch;
+    gap:10px;
+  }
+  .resource-download .bank-field-value{
+    font-size:12.5px;
+    color:var(--muted);
+  }
+  .resource-download .copy-btn{
+    text-align:center;
+    padding:10px 14px;
+    font-size:13px;
+  }
+
+  /* FAQ */
+  .faq-list{
+    gap:10px;
+  }
+
+  /* Gallery */
+  .gallery-grid{
+    gap:16px;
+  }
+  .gallery-media{
+    height:260px;
+  }
+  .gallery-date{
+    margin:14px 16px 0;
+    text-align:left;
+    font-size:12px;
+  }
+  .gallery-date + .gallery-caption{
+    padding-top:4px;
+  }
+}
+.gallery-date:empty{
+  display:none;
 }

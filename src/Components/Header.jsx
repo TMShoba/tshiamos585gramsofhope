@@ -85,12 +85,21 @@ function Header() {
     <header className="nav" ref={headerRef}>
       <div className="nav-bar">
         <div className="container nav-inner">
-          <Link className="brand" to="/" onClick={closeMenu}>
-            <img
-              className="brand-logo"
-              src={logo}
-              alt="Tshiamos 585 Grams of Hope Foundation"
-            />
+          <Link
+            className="brand"
+            to="/"
+            onClick={closeMenu}
+            aria-label="Tshiamos 585 Grams of Hope Foundation, home"
+          >
+            <span className="brand-badge">
+              <img className="brand-logo" src={logo} alt="" />
+            </span>
+            <span className="brand-text" aria-hidden="true">
+              <span className="brand-name">Tshiamo&rsquo;s</span>
+              <span className="brand-tagline">
+                <b>585</b> Grams of Hope
+              </span>
+            </span>
           </Link>
 
           <nav className="nav-links" aria-label="Main navigation">
@@ -137,7 +146,13 @@ function Header() {
           </div>
 
           <div className="mobile-actions">
-            <Link className="btn btn-pink mobile-donate" to="/donate" onClick={closeMenu}>
+            <Link
+              className={`btn btn-pink mobile-donate${menuOpen ? ' hidden' : ''}`}
+              to="/donate"
+              onClick={closeMenu}
+              tabIndex={menuOpen ? -1 : undefined}
+              aria-hidden={menuOpen || undefined}
+            >
               Donate
             </Link>
             <button
@@ -168,7 +183,6 @@ function Header() {
           inert={!menuOpen}
         >
           <div className="container mobile-nav-inner">
-            <p className="mobile-nav-heading">Explore</p>
             <div className="mobile-nav-links">
               {primaryLinks.map((link) => (
                 <Link
@@ -184,7 +198,7 @@ function Header() {
             </div>
 
             <p className="mobile-nav-heading">More</p>
-            <div className="mobile-nav-links mobile-nav-links-grid">
+            <div className="mobile-nav-links">
               {moreLinks.map((link) => (
                 <Link
                   key={link.to}
@@ -193,6 +207,7 @@ function Header() {
                   className={isActive(link.to) ? 'active' : undefined}
                 >
                   {link.label}
+                  <span aria-hidden="true">›</span>
                 </Link>
               ))}
             </div>
