@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const TARGET_DATE = new Date(2026, 10, 15, 0, 0, 0) // 15 November 2026
+const TARGET_DATE = new Date(2026, 10, 17, 0, 0, 0) // 17 November 2026
 
 function getSnapshot() {
   const now = new Date()
@@ -40,7 +40,7 @@ function Countdown() {
           <p className="nav-countdown-label">
             <span className="nav-countdown-dot" aria-hidden="true"></span>
             World Prematurity Day
-            <span className="nav-countdown-date">15 Nov</span>
+            <span className="nav-countdown-date">17 Nov</span>
           </p>
           <p className="nav-countdown-message">
             {snapshot.isToday
