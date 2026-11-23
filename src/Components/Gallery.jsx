@@ -16,6 +16,7 @@ import imgTraditionalWrap from '../assets/Gallery/tshiamo-12-traditional-wrap.jp
 import imgSecondBirthday from '../assets/Gallery/tshiamo-13-second-birthday.jpeg'
 import imgSiblings from '../assets/Gallery/tshiamo-14-siblings.jpeg'
 import imgPlaytimeA from '../assets/Gallery/tshiamo-15-playtime-a.jpeg'
+import imgBookLaunch from '../assets/Gallery/tshiamo-16-book-launch.jpeg'
 
 // ─────────────────────────────────────────────────────────
 // ⚠️ These captions are our best guess from the photos alone —
@@ -107,6 +108,12 @@ const milestones = [
     src: imgPlaytimeA,
     date: '07 August 2026',
     caption: "Just an ordinary afternoon — the kind we once weren't sure we'd get.",
+  },
+    {
+    type: 'image',
+    src: imgBookLaunch,
+    date: '15 November 2026',
+    caption: 'Book Launch',
   },
 ]
 
