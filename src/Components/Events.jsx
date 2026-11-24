@@ -29,7 +29,7 @@ function Events() {
           <article className="card">
             <div className="icon">03</div>
             <img
-              src="/images/585-grams-of-hope.jpg"
+              src="public/71XteI3yobL._SL1500_.jpg"
               alt="Book cover: 585 Grams of Hope – Tshiamo's Fight to Live by Precious Risimati"
               style={{ width: "100%", maxWidth: "260px", borderRadius: "8px", marginBottom: "1rem" }}
             />
